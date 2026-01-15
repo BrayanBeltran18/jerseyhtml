@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jerseyzone</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">Jersey<span>Zone</span></div>
+    <nav class="main-nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Jerseys</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="cart">
+      <button class="cart-button" type="button">
+        <span>Carrito</span>
+        <span id="contador-carrito" class="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-text">
+        <h1>Jerseys de futbol de la mejor calidad.</h1>
+        <p>Jerseys para fans y para jugadores.</p>
+        <a href="#productos" class="btn-primary">Ver jerseys</a>
+      </div>
+    </section>
+
+    <section id="productos" class="products-section">
+      <h2>Jerseys más vendidos.</h2>
+      <div class="products-grid">
+        <article class="product-card">
+          <div class="product-image product-image-1"></div>
+          <h3>Jersey Local FC Barcelona</h3>
+          <p class="product-desc">El equipo más en forma del mundo.</p>
+          <p class="product-price">$799.00</p>
+          <button class="btn-add" type="button" data-product="Jersey Local FC Barcelona">Agregar al carrito</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image product-image-2"></div>
+          <h3>Jersey Visita Real Madrid</h3>
+          <p class="product-desc">Diseño limpio así como sus títulos esta temporada.</p>
+          <p class="product-price">$799.00</p>
+          <button class="btn-add" type="button" data-product="Jersey Visita Real Madrid">Agregar al carrito</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image product-image-3"></div>
+          <h3>Jersey PSG Total 90</h3>
+          <p class="product-desc">El actual campeón de la champions league.</p>
+          <p class="product-price">$699.00</p>
+          <button class="btn-add" type="button" data-product="Jersey PSG Total 90">Agregar al carrito</button>
+        </article>
+
+        <article class="product-card">
+          <div class="product-image product-image-4"></div>
+          <h3>Jersey México Local 2026</h3>
+          <p class="product-desc">A ver si llega el quinto partido.</p>
+          <p class="product-price">$599.00</p>
+          <button class="btn-add" type="button" data-product="Jersey México Local 2026">Agregar al carrito</button>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact-section">
+      <h2>Contacto</h2>
+      <p>Proyecto de una página web de venta de jerseys.</p>
+      <p>Formulario de contacto básico:</p>
+      <form class="contact-form">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" />
+        </div>
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tu@email.com" />
+        </div>
+        <div class="form-group">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="3" placeholder="Escribe tu mensaje"></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <p>JerseyZone · Página de venta de jerseys en stock y por pedido.</p>
+  </footer>
+</body>
+</html>

@@ -21,6 +21,36 @@ img {
   display: block;
 }
 
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #cccccc;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.main-nav a {
+  margin: 0 8px;
+  font-size: 14px;
+}
+
+.cart-button {
+  padding: 4px 8px;
+  border: 1px solid #cccccc;
+  background-color: #ffffff;
+}
+
+.cart-count {
+  margin-left: 4px;
+  font-weight: bold;
+}
+
 .hero {
   padding: 2.5rem 1rem 1.5rem;
   text-align: center;
@@ -49,33 +79,26 @@ img {
 
 .product-image {
   border-radius: 0.6rem;
-  height: 220px;
+  height: 260px;
   margin-bottom: 0.75rem;
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
 }
 
 .product-image-1 {
   background-image: url("imagenes/fcb\ local.jpg");
-  background-size: cover;
-  background-position: center;
 }
 .product-image-2 {
   background-image: url("imagenes/rma\ visita.png");
-  background-size: cover;
-  background-position: center;
 }
 
 .product-image-3 {
   background-image: url("imagenes/psg\ total90.png");
-  background-size: cover;
-  background-position: center;
 }
 
 .product-image-4 {
   background-image: url("imagenes/mexico\ mundial\ 2026.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .btn-add {
@@ -88,6 +111,17 @@ img {
 .contact-section {
   padding: 20px 10px;
   background-color: #ffffff;
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 8px;
 }
 
 .main-footer {

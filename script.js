@@ -1,5 +1,19 @@
 let contadorCarrito = 0;
 
+function cargarCarritoDesdeStorage() {
+  const valorGuardado = localStorage.getItem("contadorCarrito");
+  if (valorGuardado !== null) {
+    const numero = parseInt(valorGuardado, 10);
+    if (!isNaN(numero) && numero >= 0) {
+      contadorCarrito = numero;
+    }
+  }
+}
+
+function guardarCarritoEnStorage() {
+  localStorage.setItem("contadorCarrito", contadorCarrito.toString());
+}
+
 function actualizarContadorCarrito() {
   const elementoContadorCarrito = document.getElementById("contador-carrito");
   if (elementoContadorCarrito) {
@@ -13,6 +27,7 @@ function manejarClickAgregarCarrito(evento) {
 
   contadorCarrito += 1;
   actualizarContadorCarrito();
+  guardarCarritoEnStorage();
 
   boton.textContent = "Agregado";
   boton.disabled = true;
@@ -26,6 +41,9 @@ function manejarClickAgregarCarrito(evento) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  cargarCarritoDesdeStorage();
+  actualizarContadorCarrito();
+
   const botonesAgregar = document.querySelectorAll(".btn-add");
   botonesAgregar.forEach((boton) => {
     boton.addEventListener("click", manejarClickAgregarCarrito);
@@ -38,6 +56,4 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("No se envían datos, al menos no todavía.");
     });
   }
-
-  actualizarContadorCarrito();
 });
